@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-after-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdfa" />
+      <stop offset="100%" stop-color="#e2f4f2" />
+    </linearGradient>
+    <linearGradient id="tooth-grad-after3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="85%" stop-color="#f5fcfc" />
+      <stop offset="100%" stop-color="#d4ecea" />
+    </linearGradient>
+    <filter id="shadow-crowd-after" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#007B7F" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#bg-after-3)" />
+
+  <!-- Midline and Ideal Arch Guide -->
+  <line x1="200" y1="30" x2="200" y2="240" stroke="#007B7F" stroke-opacity="0.22" stroke-width="1.2" stroke-dasharray="4 4" />
+  <path d="M 60 170 Q 200 120 340 170" fill="none" stroke="#007B7F" stroke-opacity="0.25" stroke-width="1.6" />
+
+  <!-- Arch Base / Gum Contour -->
+  <path d="M 75 138 C 110 80, 290 80, 325 138 C 310 126, 270 96, 200 96 C 130 96, 90 126, 75 138 Z" fill="#e8b9b5" fill-opacity="0.3" />
+
+  <!-- Teeth Group: Completely de-rotated, smooth arched alignment -->
+  <g filter="url(#shadow-crowd-after)">
+    <!-- Right Posterior -->
+    <path d="M 80 152 C 80 132, 102 130, 106 150 C 108 162, 82 165, 80 152 Z" fill="url(#tooth-grad-after3)" stroke="#509a97" stroke-width="1.2" />
+    <path d="M 108 143 C 110 119, 134 117, 140 141 C 142 159, 110 161, 108 143 Z" fill="url(#tooth-grad-after3)" stroke="#509a97" stroke-width="1.2" />
+    
+    <!-- Right Lateral Incisor (De-rotated and perfectly leveled) -->
+    <rect x="145" y="112" width="24" height="38" rx="7" fill="url(#tooth-grad-after3)" stroke="#3d8f8c" stroke-width="1.2" transform="rotate(-3 157 131)" />
+
+    <!-- Right Central Incisor -->
+    <rect x="175" y="105" width="25" height="47" rx="6" fill="url(#tooth-grad-after3)" stroke="#007B7F" stroke-width="1.5" />
+
+    <!-- Left Central Incisor -->
+    <rect x="200" y="105" width="25" height="47" rx="6" fill="url(#tooth-grad-after3)" stroke="#007B7F" stroke-width="1.5" />
+
+    <!-- Left Lateral Incisor -->
+    <rect x="231" y="112" width="24" height="38" rx="7" fill="url(#tooth-grad-after3)" stroke="#3d8f8c" stroke-width="1.2" transform="rotate(3 243 131)" />
+
+    <!-- Left Posterior -->
+    <path d="M 260 141 C 266 117, 290 119, 292 143 C 290 161, 258 159, 260 141 Z" fill="url(#tooth-grad-after3)" stroke="#509a97" stroke-width="1.2" />
+    <path d="M 294 150 C 298 130, 320 132, 320 152 C 318 165, 292 162, 294 150 Z" fill="url(#tooth-grad-after3)" stroke="#509a97" stroke-width="1.2" />
+  </g>
+
+  <!-- Alignment callout indicator -->
+  <g>
+    <circle cx="200" cy="127" r="4.5" fill="#007B7F" />
+    <circle cx="200" cy="127" r="9" fill="none" stroke="#007B7F" stroke-opacity="0.4" stroke-width="1.5" />
+    <text x="200" y="184" text-anchor="middle" fill="#007B7F" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.04em">DE-ROTATED &amp; ALIGNED</text>
+  </g>
+
+  <!-- Clinical Case Tag -->
+  <g transform="translate(20, 258)">
+    <rect width="144" height="22" rx="4" fill="#ffffff" fill-opacity="0.9" stroke="#9edbd8" stroke-width="1" />
+    <text x="72" y="15" text-anchor="middle" fill="#005A60" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.03em">CASE 03 · POST-TREATMENT</text>
+  </g>
+</svg>

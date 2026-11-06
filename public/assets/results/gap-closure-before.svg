@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-before-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#ebf1f3" />
+    </linearGradient>
+    <linearGradient id="tooth-grad-before" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="85%" stop-color="#f0f6f6" />
+      <stop offset="100%" stop-color="#dfe8e8" />
+    </linearGradient>
+    <filter id="shadow-soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#005A60" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="400" height="300" fill="url(#bg-before-1)" />
+
+  <!-- Grid / Clinical Alignment Markings -->
+  <line x1="200" y1="30" x2="200" y2="240" stroke="#007B7F" stroke-opacity="0.18" stroke-width="1.2" stroke-dasharray="4 4" />
+  <path d="M 60 175 Q 200 135 340 175" fill="none" stroke="#007B7F" stroke-opacity="0.15" stroke-width="1.5" stroke-dasharray="3 3" />
+  <circle cx="200" cy="150" r="115" fill="none" stroke="#007B7F" stroke-opacity="0.08" stroke-width="1" />
+
+  <!-- Arch Base / Gum Contour -->
+  <path d="M 75 140 C 110 85, 290 85, 325 140 C 310 130, 270 100, 200 100 C 130 100, 90 130, 75 140 Z" fill="#e8b9b5" fill-opacity="0.32" />
+
+  <!-- Teeth Group: Gap Closure Initial (Diastema between 11 & 21) -->
+  <g filter="url(#shadow-soft)">
+    <!-- Right Premolar & Canine -->
+    <path d="M 80 152 C 80 132, 102 130, 106 150 C 108 162, 82 165, 80 152 Z" fill="url(#tooth-grad-before)" stroke="#9cb5b5" stroke-width="1.2" />
+    <path d="M 108 144 C 110 120, 134 118, 140 142 C 142 160, 110 162, 108 144 Z" fill="url(#tooth-grad-before)" stroke="#9cb5b5" stroke-width="1.2" />
+    
+    <!-- Right Lateral Incisor -->
+    <rect x="142" y="112" width="22" height="38" rx="7" fill="url(#tooth-grad-before)" stroke="#88a8a8" stroke-width="1.2" transform="rotate(-6 153 131)" />
+
+    <!-- Right Central Incisor (Gap at midline: x=171 to 191 -> 9px gap from 200) -->
+    <rect x="169" y="105" width="23" height="46" rx="6" fill="url(#tooth-grad-before)" stroke="#007B7F" stroke-opacity="0.45" stroke-width="1.3" transform="rotate(-3 180 128)" />
+
+    <!-- Left Central Incisor (Gap at midline: x=209 to 231 -> 9px gap from 200) -->
+    <rect x="208" y="105" width="23" height="46" rx="6" fill="url(#tooth-grad-before)" stroke="#007B7F" stroke-opacity="0.45" stroke-width="1.3" transform="rotate(3 220 128)" />
+
+    <!-- Left Lateral Incisor -->
+    <rect x="236" y="112" width="22" height="38" rx="7" fill="url(#tooth-grad-before)" stroke="#88a8a8" stroke-width="1.2" transform="rotate(6 247 131)" />
+
+    <!-- Left Canine & Premolar -->
+    <path d="M 260 142 C 266 118, 290 120, 292 144 C 290 162, 258 160, 260 142 Z" fill="url(#tooth-grad-before)" stroke="#9cb5b5" stroke-width="1.2" />
+    <path d="M 294 150 C 298 130, 320 132, 320 152 C 318 165, 292 162, 294 150 Z" fill="url(#tooth-grad-before)" stroke="#9cb5b5" stroke-width="1.2" />
+  </g>
+
+  <!-- Gap indicator callout -->
+  <g>
+    <line x1="192" y1="126" x2="207" y2="126" stroke="#d4973b" stroke-width="2" />
+    <line x1="192" y1="120" x2="192" y2="132" stroke="#d4973b" stroke-width="1.5" />
+    <line x1="207" y1="120" x2="207" y2="132" stroke="#d4973b" stroke-width="1.5" />
+    <text x="200" y="184" text-anchor="middle" fill="#697f80" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="0.04em">CENTRAL DIASTEMA</text>
+  </g>
+
+  <!-- Clinical Case Tag -->
+  <g transform="translate(20, 258)">
+    <rect width="138" height="22" rx="4" fill="#ffffff" fill-opacity="0.8" stroke="#d2e0e0" stroke-width="1" />
+    <text x="69" y="15" text-anchor="middle" fill="#5a7071" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.03em">CASE 01 · PRE-TREATMENT</text>
+  </g>
+</svg>
